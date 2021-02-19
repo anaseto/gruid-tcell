@@ -2,7 +2,7 @@ The *gruid-tcell* module provides a [gruid](https://github.com/anaseto/gruid)
 Driver for building terminal full-window applications.
 
 The provided driver tcell package depends on the
-[tcell](https://github.com/gdamore/tcell/v2) terminal library, which uses the
+[tcell](https://github.com/gdamore/tcell) terminal library, which uses the
 permissive enough [Apache License
 v2](https://github.com/gdamore/tcell/blob/master/LICENSE). The library is pure
 Go, so no special steps are required to install it, and it allows for easy
