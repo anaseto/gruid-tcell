@@ -1,3 +1,8 @@
+# gruid-tcell
+
+[![pkg.go.dev](https://pkg.go.dev/badge/github.com/anaseto/gruid-tcell.svg)](https://pkg.go.dev/github.com/anaseto/gruid-tcell)
+[![godocs.io](https://godocs.io/github.com/anaseto/gruid-tcell?status.svg)](https://godocs.io/github.com/anaseto/gruid-tcell)
+
 The *gruid-tcell* module provides a [gruid](https://github.com/anaseto/gruid)
 Driver for building terminal full-window applications.
 
