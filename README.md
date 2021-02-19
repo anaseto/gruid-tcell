@@ -18,7 +18,7 @@ styling that has to be used by the Driver.
 
 Note that the terminal grid is not a true grid: some characters are two-cell
 wide (such as wide east-asian characters). The character width can be computed
-thanks to the [go-runewidth](github.com/mattn/go-runewidth) package, so it
+thanks to the [go-runewidth](https://github.com/mattn/go-runewidth) package, so it
 can be taken into account, but it is a bit cumbersome and ad hoc with respect
 to the graphical drivers which could handle this problem more easily (the tile
 width can be adjusted to fit any wanted character). Currently, runes with zero
