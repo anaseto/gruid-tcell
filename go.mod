@@ -3,6 +3,6 @@ module github.com/anaseto/gruid-tcell
 go 1.15
 
 require (
-	github.com/anaseto/gruid v0.18.0
-	github.com/gdamore/tcell/v2 v2.1.0
+	github.com/anaseto/gruid v0.21.0
+	github.com/gdamore/tcell/v2 v2.4.0
 )

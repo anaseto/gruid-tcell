@@ -31,6 +31,7 @@ type Driver struct {
 	mousePos  gruid.Point
 	init      bool
 	noQuit    bool
+	tty       tcell.Tty
 }
 
 // Config contains configurations options for the driver.
@@ -38,6 +39,7 @@ type Config struct {
 	StyleManager StyleManager // for cell styling (required)
 	DisableMouse bool         // disable mouse-related messages
 	RuneManager  RuneManager  // optional custom mapping for runes
+	Tty          tcell.Tty    // optional Tty (see tcell documentation)
 }
 
 // NewDriver returns a new driver with given configuration options.
@@ -46,6 +48,7 @@ func NewDriver(cfg Config) *Driver {
 		sm:    cfg.StyleManager,
 		mouse: !cfg.DisableMouse,
 		rm:    cfg.RuneManager,
+		tty:   cfg.Tty,
 	}
 }
 
@@ -64,7 +67,13 @@ func (dr *Driver) Init() error {
 		return errors.New("no style manager provided")
 	}
 	if !dr.init {
-		screen, err := tcell.NewScreen()
+		var screen tcell.Screen
+		var err error
+		if dr.tty != nil {
+			screen, err = tcell.NewTerminfoScreenFromTty(dr.tty)
+		} else {
+			screen, err = tcell.NewScreen()
+		}
 		dr.screen = screen
 		if err != nil {
 			return err
