@@ -1,3 +1,5 @@
+**Migrated to https://codeberg.org/anaseto/gruid-tcell because of new 2FA requirement**
+
 # gruid-tcell
 
 [![pkg.go.dev](https://pkg.go.dev/badge/github.com/anaseto/gruid-tcell.svg)](https://pkg.go.dev/github.com/anaseto/gruid-tcell)
